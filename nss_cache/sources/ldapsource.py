@@ -862,7 +862,7 @@ class SshkeyUpdateGetter(UpdateGetter):
 
   def __init__(self, conf):
     super(SshkeyUpdateGetter, self).__init__(conf)
-    self.attrs = ['uid', 'sshPublicKey']
+    self.attrs = ['uid', 'sshPublicKey', 'sshKey']
     if 'uidattr' in self.conf:
       self.attrs.append(self.conf['uidattr'])
     if 'uidregex' in self.conf:
@@ -888,6 +888,8 @@ class SshkeyUpdateGetter(UpdateGetter):
 
     if 'sshPublicKey' in obj:
       skey.sshkey = obj['sshPublicKey']
+    elif 'sshKey' in obj:
+      skey.sshkey = obj['sshKey']
     else:
       skey.sshkey = ''
 
