@@ -1,3 +1,9 @@
+nsscache (0.34-1~segment2) unstable; urgency=medium
+
+  * Add shell override support.
+
+ -- Michael Fischer <michael.fischer@segment.com>  Fri, 20 Oct 2017 16:42:55 +0700
+
 nsscache (0.34-1~segment1) unstable; urgency=medium
 
   * Add mTLS support.
